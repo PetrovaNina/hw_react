@@ -1,0 +1,14 @@
+header {
+    padding: var(--default-spacing) 0;
+}
+
+.header-container {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    color: var(--blue-grey-500);
+}
+
+.header-container.build-page {
+    color: var(--color-text);
+}

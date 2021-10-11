@@ -1,0 +1,97 @@
+@import 'https://yastatic.net/s3/frontend/yandex-font/v0.0.2/browser.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-feature-settings: 'liga', 'kern';
+    -moz-font-feature-settings: 'liga', 'kern';
+    font-feature-settings: 'liga', 'kern';
+    font-size: 13px;
+    background-color: white;
+    --color-bg-control: #E6E6E6;
+    --color-bg-control-hovered: #DBDBDB;
+    --color-bg-disabled: #F2F2F2;
+    --color-bg-action: #FFCC00;
+    --color-bg-action-hovered: #F2C200;
+    --color-border-default: #D9D9D9;
+    --color-border-action-active: #B3BBb3;
+    --blue-grey-500: #7F8285;
+    --orange-500: #FF9A00;
+    --green-500: #00B341;
+    --red-500: #FF3333;
+    --blue-grey-50: #F0F2F3;
+    --color-text: #000000;
+    --color-text-disabled: #7F7F7F;
+    --default-spacing: 8px;
+}
+
+.flex {
+    display: flex;
+    gap: var(--default-spacing);
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.required-mark {
+    color: var(--red-500);
+}
+
+.container {
+    max-width: 856px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    align-items: center;
+}
+
+.container-article {
+    height: 46px;
+    align-items: start;
+}
+
+article h1, .home-content-container p {
+    font-size: 15px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.article-subheading, .link {
+    color: var(--blue-grey-500)
+}
+
+.content {
+    flex-grow: 1;
+    align-items: center;
+}
+
+.settings-content-container {
+    align-items: flex-start;
+    gap: 22px;
+}
+
+.home-content-container {
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    padding-bottom: 28px;
+}
+

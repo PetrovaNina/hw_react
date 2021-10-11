@@ -1,0 +1,20 @@
+footer {
+    padding: var(--default-spacing) 0;
+    background-color: var(--blue-grey-50);
+}
+
+.footer-container {
+    justify-content: space-between;
+    color: var(--blue-grey-500);
+}
+
+.footer-navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-navbar-item {
+    display: inline-block;
+    margin-right: 12px;
+}

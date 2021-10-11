@@ -1,0 +1,85 @@
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+.builds-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    flex-direction: column-reverse;
+}
+
+.builds-list-item {
+    width: 100%;
+    padding: 12px 24px;
+    margin: 0;
+    box-shadow: 0 0 1px rgba(67, 68, 69, 0.3), 0 1px 1px rgba(67, 68, 69, 0.3);
+    border-radius: 6px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.builds-list-item-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.builds-list-item-data {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.build-id {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.build-id.done {
+    color: var(--green-500);
+}
+
+.build-id.processing {
+    color: var(--orange-500);
+}
+
+.build-id.failed {
+    color: var(--red-500);
+}
+
+.build-heading {
+    font-size: 15px;
+}
+
+.builds-info-commit, .builds-info-commit-author {
+    gap: 3px;
+}
+
+.icon {
+    opacity: 0.3;
+}
+
+.builds-info-commit-num, .build-meta {
+    opacity: 0.65;
+}
+
+.build-meta {
+    width: 100px;
+}
+
+.show-more-btn {
+    margin-top: var(--default-spacing);
+}
+
+@media (max-width: 768px) {
+    .build-meta {
+        width: 100%;
+        padding-top: var(--default-spacing);
+        border-top: 1px solid var(--blue-grey-50);
+    }
+}
+
+@media (max-width: 320px) {
+    .build-info {
+        flex-direction: column;
+    }
+}
