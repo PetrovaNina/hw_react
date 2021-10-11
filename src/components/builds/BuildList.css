@@ -23,7 +23,10 @@ h1, h2, h3, h4, p {
     width: 22px;
     height: 22px;
 }
-
+ .builds-info-commit-num {
+    width: 55px;
+     overflow: hidden;
+}
 .builds-list-item-data {
     width: 100%;
     justify-content: space-between;
@@ -54,7 +57,7 @@ h1, h2, h3, h4, p {
     gap: 3px;
 }
 
-.icon {
+.builds-list-item .icon {
     opacity: 0.3;
 }
 

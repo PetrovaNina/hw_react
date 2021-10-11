@@ -1,7 +1,7 @@
 import React from "react";
 import './BuildList.css'
 import ListItem from "./BuildListItem";
-import {buildsStore} from "../buildsStore";
+import {buildsStore} from "../store/buildsStore";
 import Button from "../button/Button";
 
 const button = {

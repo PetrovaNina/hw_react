@@ -51,6 +51,18 @@ a {
     text-decoration: none;
 }
 
+.button {
+    padding: var(--default-spacing);
+    flex-direction: row;
+    color: var(--color-text);
+    background-color: var(--color-bg-control);
+    border-radius: 4px;
+}
+
+.button-link {
+    color: var(--color-text);
+}
+
 .required-mark {
     color: var(--red-500);
 }

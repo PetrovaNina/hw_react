@@ -7,6 +7,7 @@ let currentBuild = 1335;
 
 export default function ListItem(params) {
     let {status, statusTitle, branch, author, id} = params.params;
+
     const icon = {
         done: 'icons/check.png',
         processing: 'icons/clock.svg',
@@ -22,7 +23,7 @@ export default function ListItem(params) {
             <div className='builds-list-item-data flex'>
                 <div className='build-frame flex column'>
                     <div className='build-status flex align-center'>
-                        <span className='build-id done'>{`#${currentBuild++}`}</span>
+                        <span className='build-id done'>{`#${currentBuild}`}</span>
                         <h3 className='build-heading'>{statusTitle}</h3>
                     </div>
                     <div className='build-info flex'>

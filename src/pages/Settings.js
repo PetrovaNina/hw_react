@@ -41,7 +41,7 @@ export const Settings = () => {
         <Fragment>
             <section className='content'>
                 <div className='content-container settings-content-container container flex column'>
-                    <article className='content-container container-article'>
+                    <article className='content-container container-article flex column'>
                         <h1>Settings</h1>
                         <p className='article-subheading'>Configure repository connection and synchronization
                             settings.</p>

@@ -21,7 +21,7 @@ const Modal = ({open, submit, cancel}) => {
         },
         {
             children: 'Cancel',
-            onClick: 'cancel',
+            onClick: cancel,
             className: 'modal-cancel-btn default',
             disabled: false,
             active: true,
