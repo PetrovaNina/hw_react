@@ -5,28 +5,19 @@ import './Form.css'
 import classNames from "classnames";
 
 export default function Form(props) {
-    const page = window.location.pathname;
-    const text = page === '/settings' ? 'Save' : page === '/build-history' ? 'Run build' : null;
+
     const buttonProps = [
         {
-            children: text,
+            children: 'Save',
             href: '/build-history',
-            // children: null,
-            // onClick() {
-            //     // <Switch>
-            //         <Route path={'/build-history'} component={BuildHistory}/>
-            //     // </Switch>
-            // },
-            className: page.slice(1) + '-submit-btn action',
+            className: 'build-history-submit-btn action',
             disabled: false,
             active: true,
-            // value: text,
-            // type: 'submit',
         },
         {
             children: 'Cancel',
             href: '/',
-            className: page.slice(1) + '-cancel-btn default',
+            className: 'form-cancel-btn default',
             disabled: false,
             active: true,
         },
@@ -36,7 +27,7 @@ export default function Form(props) {
             <div className='form-group flex column'>
                 {props.fields.map(field => {
                     let {label, placeholder, isRequired, type, ...attrs} = field;
-                    //className, direction, text, hasIcon
+
                     const name = label.replaceAll(' ', '-');
                     const classes = classNames(
                         'form-field', 'flex',
@@ -44,12 +35,13 @@ export default function Form(props) {
                         attrs.direction ? attrs.direction : 'column'
                     );
                     return <div key={label} className={classes}>
+                        {label &&
                         <label
                             htmlFor={name}
                             className='form-label'>
                             {label}
                             {isRequired && <span className='required-mark'> *</span>}
-                        </label>
+                        </label>}
                         <input
                             name={name}
                             id={name} type={type ? type : 'text'}

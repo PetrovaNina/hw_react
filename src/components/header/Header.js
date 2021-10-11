@@ -4,7 +4,7 @@ import './Header.css'
 import classNames from "classnames";
 import {nanoid} from "nanoid";
 
-export default function Header() {
+export default function Header({onClick}) {
     const page = window.location.pathname;
     const isBuildHistoryPage = page === '/build-history'
     const isNotSettingPage = page !== '/settings';
@@ -19,7 +19,7 @@ export default function Header() {
         <header>
             <div className={headerClasses}>
                 <h1>{heading}</h1>
-                { isNotSettingPage && <HeaderButtons key={nanoid()}/>}
+                { isNotSettingPage && <HeaderButtons onClick={onClick} key={nanoid()}/>}
             </div>
         </header>
     )

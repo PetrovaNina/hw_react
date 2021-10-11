@@ -58,9 +58,12 @@
 }
 
 @media (min-width: 540px) {
+    .header-buttons .btn {
+        padding-right: 18px;
+    }
+
     .header-buttons .btn span {
         display: block;
-        padding-right: 10px;
     }
 }
 
