@@ -22,7 +22,6 @@
     background-color: var(--color-bg-action-hovered);
 }
 
-
 .btn.default {
     background-color: var(--color-bg-control);
 }
@@ -49,21 +48,28 @@
     gap: 6px;
 }
 
-.header-buttons .btn span {
-    display: none;
+.form-buttons {
+    width: 100%;
 }
 
-.btn .icon {
-    opacity: 1;
+@media (max-width: 360px) {
+    .btn:not(.header-buttons .btn) {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 540px) {
+    .header-buttons .btn span {
+        display: none;
+    }
 }
 
 @media (min-width: 540px) {
-    .header-buttons .btn {
-        padding-right: 18px;
-    }
-
     .header-buttons .btn span {
-        display: block;
+        padding-right: 5px;
+    }
+    .btn.open-settings-btn {
+        padding-left: 10px;
     }
 }
-

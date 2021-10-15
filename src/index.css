@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    /* width: 100vw; */
     font-family: 'YS Text', 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-feature-settings: 'liga', 'kern';
     -moz-font-feature-settings: 'liga', 'kern';
@@ -78,6 +79,7 @@ a {
 .container-article {
     height: 46px;
     align-items: start;
+    flex-wrap: nowrap;
 }
 
 article h1, .home-content-container p {
