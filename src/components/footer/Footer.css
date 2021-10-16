@@ -18,3 +18,7 @@ footer {
     display: inline-block;
     margin-right: 12px;
 }
+
+footer .link:hover {
+    color: var(--red-500);
+}
