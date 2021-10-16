@@ -20,9 +20,8 @@ const Button = (params) => {
         className,
         {active},
     );
-    // attrs.type ? 'input' :
 
-    const Tag = attrs.href ? 'a' : 'button';
+    const Tag = attrs.href ? 'a' : attrs.type ? 'input' : 'button';
     return(
         <Tag
             className={classes}
