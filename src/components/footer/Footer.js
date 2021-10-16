@@ -1,14 +1,9 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Footer.css'
 
-const footerNavLinks = [
-    { id: 'Support', link: '#' },
-    { id: 'Learning', link: '#' },
-    { id: 'Русская версия', link: '#' }
-]
-
-function Footer() {
+export default function Footer({ props }) {
+    const { footerNavLinks, copyright } = props
     return (
         <footer>
             <div className='footer-container container flex'>
@@ -17,10 +12,8 @@ function Footer() {
                         <NavLink className='link' to={item}>{item.id}</NavLink>
                     </li>)}
                 </ul>
-                <span className={'copyright'}>© 2021 Nina Petrova</span>
+                <span className={'copyright'}>{copyright}</span>
             </div>
         </footer>
     )
 }
-
-export default Footer;

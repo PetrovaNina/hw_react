@@ -7,7 +7,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Modal from "./components/modal/Modal";
 
-function App() {
+export default function App() {
     const [open, setOpen] = useState(false);
     const onClick = () => setOpen(true);
 
@@ -20,7 +20,7 @@ function App() {
                     <Route path={'/settings'} component={Settings}/>
                     <Route path={'/build-history'} component={BuildHistory}/>
                 </Switch>
-                <Footer/>
+                <Footer props={footerProps}/>
             </div>
             <Modal open={open}
                    submit={() => setOpen(false)}
@@ -30,4 +30,11 @@ function App() {
     )
 }
 
-export default App;
+const footerProps = {
+    footerNavLinks: [
+        { id: 'Support', link: '#' },
+        { id: 'Learning', link: '#' },
+        { id: 'Русская версия', link: '#' }
+    ],
+    copyright: '© 2021 Nina Petrova'
+}

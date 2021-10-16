@@ -25,12 +25,12 @@ export default function InputField({ field }) {
     const name = attrs.name || label;
     name.replaceAll(' ', '-');
 
-    console.log(name)
     const classes = classNames(
         'form-field', 'flex',
         attrs.className,
         attrs.direction ? attrs.direction : 'column'
     );
+    
     return <div className={classes}>
         {label && <label
             htmlFor={name}
