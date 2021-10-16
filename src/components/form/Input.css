@@ -1,0 +1,29 @@
+.form-field {
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 6px;
+  position: relative;
+}
+
+.form-input {
+  height: 32px;
+  padding: 10px 13px;
+  border: 2px solid var(--color-border-default);
+  border-radius: 4px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-input-clear-button {
+  position: absolute;
+  right: var(--default-spacing);
+  bottom: var(--default-spacing);
+  height: 16px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
