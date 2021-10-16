@@ -6,22 +6,3 @@ form, .form-item {
     max-width: 474px;
     gap: 18px;
 }
-
-.form-field {
-    flex-wrap: wrap;
-    gap: 6px;
-    position: relative;
-}
-
-.form-input {
-    height: 32px;
-    padding: 10px 13px;
-    border: 2px solid var(--color-border-default);
-    border-radius: 4px;
-}
-
-.input-clear-icon {
-    position: absolute;
-    right: var(--default-spacing);
-    bottom: var(--default-spacing);
-}
