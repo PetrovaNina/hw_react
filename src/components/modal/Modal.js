@@ -1,39 +1,14 @@
 import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
-import Button from "../button/Button";
 import PropTypes from "prop-types";
+import Form from "../form/Form";
 import '../../index.css'
 import './Modal.css'
-import InputField from "../form/Input";
 
 const modalRootElement = document.querySelector('#modal');
 
 const Modal = ({ open, submit, cancel }) => {
     const element = useMemo(() => document.createElement('div'), [])
-    const buttonProps = [
-        {
-            value: 'Run build',
-            onClick: submit,
-            className: 'modal-submit-btn action',
-            disabled: false,
-            active: true,
-            type: 'submit',
-        },
-        {
-            children: 'Cancel',
-            onClick: cancel,
-            className: 'modal-cancel-btn default',
-            disabled: false,
-            active: true,
-        },
-    ]
-    const inputProps = {
-        label: false,
-        placeholder: 'Commit hash',
-        isRequired: false,
-        hasIcon: true,
-        name: 'commit hash',
-    }
 
     useEffect(() => {
         modalRootElement.appendChild(element);
@@ -41,6 +16,36 @@ const Modal = ({ open, submit, cancel }) => {
             modalRootElement.removeChild(element);
         }
     });
+
+    const formProps = {
+        fields: [
+            {
+                label: false,
+                placeholder: 'Commit hash',
+                isRequired: false,
+                hasIcon: true,
+                name: 'commit hash',
+            }
+        ],
+        buttons: [
+            {
+                value: 'Run build',
+                onClick: submit,
+                className: 'modal-submit-btn action',
+                disabled: false,
+                active: true,
+                type: 'submit',
+            },
+            {
+                children: 'Cancel',
+                onClick: cancel,
+                className: 'modal-cancel-btn default',
+                disabled: false,
+                active: true,
+            },
+        ]
+
+    }
 
     if (open) {
         return createPortal(
@@ -50,14 +55,7 @@ const Modal = ({ open, submit, cancel }) => {
                         <h3 className="modal-title">New build</h3>
                         <p>Enter the commit hash witch you want to build.</p>
                     </article>
-                    <form className='modal-form'>
-                        <InputField field={inputProps} key={inputProps.name} />
-                        <div className='form-buttons flex row'>{
-                            buttonProps.map(button => {
-                                return <Button key={button.type || button.children} params={button} />
-                            })}
-                        </div>
-                    </form>
+                    <Form props={formProps} />
                 </div>
             </div>,
             element)
