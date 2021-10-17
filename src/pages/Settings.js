@@ -58,7 +58,7 @@ const formProps = {
     buttons: [
         {
             onClick: () => {
-                console.log('Request success! Redirect to settings page');
+                // console.log('Request success! Redirect to settings page');
             },
             className: 'build-history-submit-btn action',
             disabled: false,

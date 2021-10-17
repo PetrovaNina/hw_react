@@ -20,10 +20,7 @@ export default function InputField({ field }) {
     };
 
 
-    let { label, placeholder, isRequired, type, ...attrs } = field;
-
-    const name = attrs.name || label;
-    name.replaceAll(' ', '-');
+    let { name, label, placeholder, isRequired, type, ...attrs } = field;
 
     const classes = classNames(
         'form-field', 'flex',
@@ -39,7 +36,7 @@ export default function InputField({ field }) {
             {isRequired && <span className='required-mark'> *</span>}
         </label>}
         <input
-            value={inputValue} onChange={handleUserInput}
+            value={inputValue} onChange={handleUserInput} onBlur={e=>field.onChange(e)}
             name={name}
             id={name} type={type ? type : 'text'}
             className='form-input' placeholder={placeholder}
