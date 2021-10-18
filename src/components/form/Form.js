@@ -32,7 +32,8 @@ export default class Form extends React.Component {
             <form action='/build-history'>
                 <div className='form-group flex column'>
                     {fields.map(field => {
-                        field.name = field.label.replaceAll(' ', '-');
+                        field.name = field.name || field.label;
+                        field.name.replaceAll(' ', '-');
                         field.onChange = (event) => this.handleUpdateState(field.name, event.target.value);
 
                         return <InputField field={field} key={field.label} />
